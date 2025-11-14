@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>2024 T20 World Cup Teams (external CSS/JS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏏 ICC T20 World Cup 2024</h1>
+            <p>Explore Teams & Squads</p>
+        </div>
+
+        <div id="teamsContainer"></div>
+
+        <div class="navigation">
+            <button class="nav-btn" id="prevBtn" onclick="navigateTeam(-1)">
+                ← Previous
+            </button>
+            <div class="page-indicator">
+                <span id="pageIndicator"></span>
+            </div>
+            <button class="nav-btn" id="nextBtn" onclick="navigateTeam(1)">
+                Next →
+            </button>
+        </div>
+
+        <div class="team-selector" id="teamSelector"></div>
+    </div>
+
+    <!-- Modal for player details -->
+    <div id="playerModal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button id="closeModal" class="close-btn" aria-label="Close">✕</button>
+        <h3 id="modalPlayerName"></h3>
+        <p id="modalPlayerTeam"></p>
+        <div class="modal-actions">
+            <button id="copyBtn">Copy name</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
